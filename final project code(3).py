@@ -42,6 +42,8 @@ def modelvallist(period):
 
 modellist1 = np.array(modelvallist(period))
 
+# The code in Line 48, though redundant, was kept because the color it provides to the graph improves the contrast between the fitted curve
+# and the points, and makes the graph more aesthetically pleasing. 
 plt.figure(figsize = (10, 5))
 plt.scatter(period, sm_axis, c = "orange", alpha = 1.0, linewidth = 3)
 sol, why = curve_fit(modelcurve, period, sm_axis, p0 = 0.1)
